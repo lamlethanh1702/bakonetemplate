@@ -1,0 +1,369 @@
+/* Reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Lato-Regular;
+    src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: Lato-Italic;
+    src: url(../fonts/Lato/Lato-Italic.ttf);
+}
+
+@font-face {
+    font-family: Lato-Bold;
+    src: url(../fonts/Lato/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url(../fonts/Lato/Lato-Light.ttf);
+}
+
+/* Variable (biến) */
+:root {
+    --primary-color: #444;
+    --secondary-color: #fff;
+    --third-color: #1bbc9b;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Lato-Regular;
+    color: var(--primary-color);
+}
+
+/* Header */
+/* Menu */
+.navbar-light .navbar-nav .nav-link {
+    color: var(--primary-color);
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: 7px;
+    font-size: 14px;
+}
+
+.navbar-light .navbar-nav li:last-child .nav-link {
+     margin-right: 0;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    background-color: var(--third-color);
+    color: #fff;
+}
+
+.navber {
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+
+/* Main */
+/* Common */
+button {
+    background-color: var(--third-color);
+    border: none;
+    font-family: Lato-Bold;
+    font-size: 13px;
+    color: var(--secondary-color);
+    padding-left: 14px;
+    padding-right: 14px;
+    height: 37px;
+}
+/* Home */
+.home {
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 22px;
+    height: 600px;
+    padding-top: 70px;
+    padding-bottom: 82px;
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+    
+}
+
+.home h1 {
+    font-size: 55px;
+    font-family: Lato-Light;
+    margin-bottom: 29px;
+}
+.home h1 span {
+    font-family: Lato-Bold;
+}
+.home p {
+    font-family: Lato-Light;
+    font-size: 18px;
+    max-width: 576px;
+    margin: auto;
+    margin-bottom: 57px;
+}
+
+.home button {
+    margin-bottom: 27px;
+    letter-spacing: 3px;
+}
+
+
+/* Portfolio */
+.portfolio {
+    padding-top: 51px;
+    padding-bottom: 61px;
+}
+
+.portfolio h2 {
+    font-size: 28px;
+    margin-bottom: 11px;
+}
+
+.portfolio p {
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.portfolio button.active {
+    background-color: #16a086;
+}
+
+.portfolio button {
+    margin-bottom: 45px;
+    margin-right:13px;
+}
+
+.portfolio button:last-of-type {
+    margin-right:0;
+}
+
+.portfolio .box {
+    position: relative;
+    margin-bottom: 35px;
+    display: inline-block;
+}
+
+.portfolio .box .overlay {
+    position: absolute;
+    background-image: url('../images/hover.png');
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--secondary-color);
+    pointer-events: none;
+    transform: scale(0);
+    transition: .5s ease;
+}
+
+.portfolio .box:hover .overlay {
+    transform: scale(1);
+}
+
+
+.portfolio .box .overlay .content span:nth-of-type(1) {
+    display: inline-block;
+    width: 43px;
+    line-height: 45px;
+    background-image: url('../images/search.png');
+    border-radius: 50%;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.portfolio .box .overlay .content span:nth-of-type(2) {
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.portfolio .box .overlay .content span:nth-of-type(3) {
+    font-size: 14px;
+}
+
+
+
+/* About */
+.about {
+    background-color: #16a086;
+    padding-top: 53px;
+    padding-bottom: 54px;
+}
+
+.about h2{
+    font-size:28px;
+    margin-bottom: 11px;
+    color: var(--secondary-color);
+}
+
+.about>p {
+    color: var(--secondary-color);
+    font-size: 14px;
+    margin-bottom: 42px;
+}
+
+.about .box-info {
+    background-color: var(--secondary-color);
+    padding-top:18px;
+    padding-bottom: 18px;
+    width: 220px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.about .box-info h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.about .box-info span {
+    font-family: Lato-Italic;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.about .box-info p {
+    font-size: 14px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.about .box {
+    position: relative;
+}
+
+.about .box .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 48px;
+    background-image: url('../images/hover.png');
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.about .box .overlay:hover {
+    opacity: 1;
+}
+
+.about .box .overlay a {
+    color: var(--secondary-color);
+    font-size: 29px;
+}
+
+/* Contact */
+.contact {
+    padding-top: 49px;
+    padding-bottom: 61px;
+    background-color: #ecf0f1;
+    padding-left: 50px;
+}
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 13px;
+}
+.contact>p {
+    font-size: 14px;
+    margin-bottom: 51px;
+}
+
+.contact input, .contact textarea {
+    border: 2px solid #bec3c7;
+    border-radius: 0;
+    margin-bottom: 22px;
+}
+
+.contact input {
+    height: 47px;
+}
+
+.contact textarea {
+    height: 153px ;
+}
+
+.contact ::placeholder{
+    font-family: Lato-Italic ;
+    font-size: 14px;
+    color: #999;
+}
+
+.contact button {
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+    font-family: Lato-Bold;
+    padding-left: 28px;
+    padding-right: 28px;
+    border: none;
+}
+
+.contact .col-right>* {
+    font-size: 14px;
+}
+
+.contact .row h3 {
+    font-family: Lato-Regular;
+}
+
+.contact address {
+    margin-bottom: 24px;
+    display: flex;
+}
+
+.contact address span {
+    margin-left: 5px;
+    margin-top: -4px;
+}
+
+/* Footer */
+footer {
+    background-color: #2d3e50;
+    color: var(--secondary-color);
+    height: 86px;
+    display: flex;
+    align-items: center;
+}
+
+footer a {
+    position: fixed;
+    width: 44px;
+    line-height: 44px;
+    background-color: var(--third-color);
+    right: 42px;
+    bottom: 20px;
+    color: var(--secondary-color) !important;
+    text-align: center;
+    
+}
+
+@media (max-width:768px) {
+    .navbar-collapse {
+        position: absolute;
+        background-color: rgba(208, 208, 208, 0.5);
+        top: 100%;
+        width: 100%;
+        left: 0;    
+    }
+    .navbar-light .navbar-nav .nav-link {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .navbar-light .navbar-nav li:last-child .nav-link {
+        margin-bottom: 0;
+    }
+    .navbar ul {
+        margin-top: 0 !important;
+    }
+}
+
+
